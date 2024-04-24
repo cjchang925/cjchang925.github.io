@@ -1,1 +1,15 @@
-<h1>home works!</h1>
+<div class="homepage">
+  <div class="greeting-text">
+    <div *ngFor="let greeting of greetings; let i = index">
+      <h1 *ngIf="animationState >= i" [@appearAnimation]="animationState">
+        <span *ngFor="let letter of greeting">
+          {{ letter === " " ? "&nbsp;" : letter }}
+        </span>
+      </h1>
+    </div>
+  </div>
+
+  <div class="greeting-image">
+    <img src="assets/images/myself.png" alt="myself" />
+  </div>
+</div>
