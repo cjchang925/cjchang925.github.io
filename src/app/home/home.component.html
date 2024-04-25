@@ -1,7 +1,7 @@
 <div class="homepage">
   <div class="greeting-text">
     <div *ngFor="let greeting of greetings; let i = index">
-      <h1 *ngIf="animationState >= i" [@appearAnimation]="animationState">
+      <h1 *ngIf="animationState >= i" [@appearAnimation]="greetings.length" (@appearAnimation.done)="animationDone()">
         <span *ngFor="let letter of greeting">
           {{ letter === " " ? "&nbsp;" : letter }}
         </span>
