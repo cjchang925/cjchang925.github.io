@@ -1,0 +1,36 @@
+.article-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+markdown {
+  margin-top: 30px;
+  width: 60%;
+}
+
+markdown ::ng-deep h1 {
+  font-size: 66px;
+  line-height: 80px;
+}
+
+markdown ::ng-deep h2 {
+  font-size: 44px;
+  line-height: 60px;
+}
+
+markdown ::ng-deep p,
+markdown ::ng-deep li {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+markdown ::ng-deep a {
+  text-decoration: none;
+  color: rgb(70, 160, 249);
+}
+
+markdown ::ng-deep a:hover {
+  color: rgb(37, 112, 187);
+}
