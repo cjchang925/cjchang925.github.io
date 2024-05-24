@@ -34,3 +34,9 @@ markdown ::ng-deep a {
 markdown ::ng-deep a:hover {
   color: rgb(37, 112, 187);
 }
+
+markdown ::ng-deep img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
