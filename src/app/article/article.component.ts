@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { lastValueFrom, take } from 'rxjs';
 
@@ -19,25 +19,18 @@ export class ArticleComponent {
    */
   public loaded: boolean = false;
 
-  constructor(private spinner: NgxSpinnerService, private http: HttpClient) {}
+  constructor(private spinner: NgxSpinnerService, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
-  ngOnInit() {
-    // 顯示 spinner 並載入 markdown 檔案
-    this.spinner.show().then(async () => {
-      await this.loadMarkdown();
+  async ngOnInit() {
+    // 顯示 spinner
+    await this.spinner.show();
+    this.cdr.markForCheck();
+
+    // 取得 markdown 檔案並隱藏 spinner
+    this.http.get('assets/articles/test.md', { responseType: 'text' }).subscribe(async (data) => {
+      this.markdown = data;
+      this.loaded = true;
+      await this.spinner.hide();
     });
-  }
-
-  /**
-   * 載入 markdown 檔案，完成後將 loaded 設為 true 並隱藏 spinner
-   */
-  public async loadMarkdown(): Promise<void> {
-    this.markdown = await lastValueFrom(
-      this.http
-        .get('assets/articles/test.md', { responseType: 'text' })
-        .pipe(take(1))
-    );
-    this.loaded = true;
-    await this.spinner.hide();
   }
 }
