@@ -14,29 +14,30 @@ export class ArticleComponent {
    */
   public markdown: string = '';
 
+  /**
+   * 是否已載入 markdown 檔案
+   */
+  public loaded: boolean = false;
+
   constructor(private spinner: NgxSpinnerService, private http: HttpClient) {}
 
-  /**
-   * 啟動 spinner 並載入 markdown 檔案
-   */
-  async ngOnInit(): Promise<void> {
-    await this.spinner.show();
-    await this.loadMarkdown();
-    await this.afterLoading();
+  ngOnInit() {
+    // 顯示 spinner 並載入 markdown 檔案
+    this.spinner.show().then(async () => {
+      await this.loadMarkdown();
+    });
   }
 
+  /**
+   * 載入 markdown 檔案，完成後將 loaded 設為 true 並隱藏 spinner
+   */
   public async loadMarkdown(): Promise<void> {
     this.markdown = await lastValueFrom(
       this.http
         .get('assets/articles/test.md', { responseType: 'text' })
         .pipe(take(1))
     );
-  }
-
-  /**
-   * 載入 markdown 檔案後，隱藏 spinner
-   */
-  public async afterLoading(): Promise<void> {
+    this.loaded = true;
     await this.spinner.hide();
   }
 }
