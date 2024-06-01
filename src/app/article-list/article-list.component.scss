@@ -8,7 +8,7 @@
 
   .article-entry {
     width: 80%;
-    min-height: 200px;
+    height: 200px;
     display: flex;
     flex-direction: row;
     border-radius: 20px;
@@ -61,7 +61,7 @@
 
   .article-entry.mobile {
     width: 90%;
-    min-height: 180px;
+    height: fit-content;
 
     .intro {
       width: 100%;
