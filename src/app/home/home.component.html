@@ -1,7 +1,11 @@
-<div class="homepage">
-  <div class="greeting-text">
+<div class="homepage" [ngClass]="{ 'mobile': rwdService.isMobile }">
+  <div class="greeting-text" [ngClass]="{ 'mobile': rwdService.isMobile }">
     <div *ngFor="let greeting of greetings; let i = index">
-      <h1 *ngIf="animationState >= i" [@appearAnimation]="greetings.length" (@appearAnimation.done)="animationDone()">
+      <h1
+        *ngIf="animationState >= i"
+        [@appearAnimation]="greetings.length"
+        (@appearAnimation.done)="animationDone()"
+      >
         <span *ngFor="let letter of greeting">
           {{ letter === " " ? "&nbsp;" : letter }}
         </span>
@@ -9,7 +13,7 @@
     </div>
   </div>
 
-  <div class="greeting-image">
+  <div class="greeting-image" [ngClass]="{ 'mobile': rwdService.isMobile }">
     <img src="assets/images/myself.png" alt="myself" />
   </div>
 </div>

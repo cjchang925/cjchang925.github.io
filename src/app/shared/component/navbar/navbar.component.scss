@@ -1,0 +1,83 @@
+.mat-toolbar {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  .general-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+
+    .name {
+      font-family: sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 20px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .link {
+      font-family: sans-serif;
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 0;
+      text-decoration: none;
+      color: black;
+      transition: 0.2s ease-in-out;
+    }
+
+    .link:hover {
+      background-color: #eee;
+      border-radius: 100px;
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+
+  .general-nav.mobile {
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 140px;
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .link {
+      font-family: sans-serif;
+      font-size: 18px;
+      margin: 0;
+      text-decoration: none;
+      color: black;
+      transition: 0.2s ease-in-out;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 70px;
+      gap: 5px;
+
+      img {
+        height: 20px;
+      }
+    }
+
+    .link:hover {
+      background-color: #eee;
+      border-radius: 100px;
+    }
+  }
+}

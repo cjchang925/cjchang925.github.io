@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <div class="general-nav" [ngClass]="{ mobile: rwdService.isMobile }">
+    <a class="name" href="/home">Chi-Chun's Lab</a>
+    <a class="link" href="/article" [ngClass]="{ mobile: rwdService.isMobile }"
+      >Article</a
+    >
+    <a
+      class="link"
+      href="https://github.com/cjchang925"
+      target="_blank"
+      rel="noopener noreferrer"
+      [ngClass]="{ mobile: rwdService.isMobile }"
+      >GitHub</a
+    >
+    <a
+      class="link"
+      href="mailto:cjchang925@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      [ngClass]="{ mobile: rwdService.isMobile }"
+      >Email</a
+    >
+    <mat-icon
+      *ngIf="rwdService.isMobile"
+      (click)="showMobileNav = !showMobileNav"
+      >menu</mat-icon
+    >
+  </div>
+  <div class="mobile-nav" [@showMobileNav]="showMobileNav">
+    <a
+      class="link"
+      style="border-bottom: 1px solid #ddd;"
+      href="/article"
+      *ngIf="showMobileNav"
+      [@showMobileNav]="showMobileNav"
+      ><mat-icon>description</mat-icon>Article</a
+    >
+    <a
+      class="link"
+      href="https://github.com/cjchang925"
+      target="_blank"
+      rel="noopener noreferrer"
+      *ngIf="showMobileNav"
+      [@showMobileNav]="showMobileNav"
+    >
+      <img src="assets/images/github.png" alt="github" />
+      GitHub
+    </a>
+  </div>
+</mat-toolbar>

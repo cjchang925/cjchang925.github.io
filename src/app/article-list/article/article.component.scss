@@ -8,16 +8,23 @@
 markdown {
   margin-top: 30px;
   width: 60%;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.mobile {
+  width: 90%;
 }
 
 markdown ::ng-deep h1 {
   font-size: 66px;
   line-height: 80px;
+  font-family: "Signika Negative", sans-serif;
 }
 
 markdown ::ng-deep h2 {
   font-size: 44px;
   line-height: 60px;
+  font-family: "Signika Negative", sans-serif;
 }
 
 markdown ::ng-deep p,

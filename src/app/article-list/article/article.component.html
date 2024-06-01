@@ -4,6 +4,7 @@
 
 <div class="article-page">
   <markdown
+    [ngClass]="{ 'mobile': rwdService.isMobile }"
     emoji
     *ngIf="loaded"
     [data]="markdown"

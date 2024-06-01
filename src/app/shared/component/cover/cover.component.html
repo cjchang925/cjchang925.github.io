@@ -1,0 +1,7 @@
+<div class="cover-container">
+  <div class="tilted-line" *ngIf="!rwdService.isMobile"></div>
+  <div class="ng-content">
+    <ng-content></ng-content>
+  </div>
+  <div class="tilted-line" *ngIf="!rwdService.isMobile"></div>
+</div>
