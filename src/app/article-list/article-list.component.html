@@ -1,7 +1,7 @@
 <div class="container">
-  <app-cover>
+  <app-cover *ngIf="!rwdService.isMobile">
     <h1>Article</h1>
-    <p>Mark down my instant thoughts.</p>
+    <p>Flash Thoughts and Revelations.</p>
   </app-cover>
 
   <div
@@ -10,13 +10,16 @@
     *ngFor="let article of articles"
     (click)="viewArticle(article.id)"
   >
-    <div class="intro">
-      <p class="title">{{ article.title }}</p>
-      <p class="subtitle">{{ article.subtitle }}</p>
-      <p class="date">{{ article.date }}</p>
+    <div class="entry">
+      <div class="intro">
+        <p class="title">{{ article.title }}</p>
+        <p class="subtitle">{{ article.subtitle }}</p>
+        <p class="date">{{ article.date }}</p>
+      </div>
+      <div class="image">
+        <img [src]="article.coverImagePath" alt="article cover" />
+      </div>
     </div>
-    <div class="image" *ngIf="!rwdService.isMobile">
-      <img [src]="article.coverImagePath" alt="article cover" />
-    </div>
+    <div class="separation-line"></div>
   </div>
 </div>

@@ -5,44 +5,56 @@
   justify-content: center;
 }
 
-markdown {
+.general-markdown {
   margin-top: 30px;
   width: 60%;
   font-family: "Signika Negative", sans-serif;
 }
 
-.mobile {
+.general-markdown.mobile {
   width: 90%;
 }
 
-markdown ::ng-deep h1 {
+.general-markdown ::ng-deep h1 {
   font-size: 66px;
   line-height: 80px;
   font-family: "Signika Negative", sans-serif;
 }
 
-markdown ::ng-deep h2 {
+.general-markdown.mobile ::ng-deep h1 {
   font-size: 44px;
   line-height: 60px;
   font-family: "Signika Negative", sans-serif;
 }
 
-markdown ::ng-deep p,
-markdown ::ng-deep li {
+.general-markdown ::ng-deep h2 {
+  font-size: 44px;
+  line-height: 60px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.general-markdown.mobile ::ng-deep h2 {
+  font-size: 30px;
+  line-height: 40px;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.general-markdown ::ng-deep p,
+.general-markdown ::ng-deep li {
   font-size: 20px;
   line-height: 30px;
 }
 
-markdown ::ng-deep a {
+.general-markdown ::ng-deep a {
   text-decoration: none;
   color: rgb(70, 160, 249);
 }
 
-markdown ::ng-deep a:hover {
+.general-markdown ::ng-deep a:hover {
   color: rgb(37, 112, 187);
 }
 
-markdown ::ng-deep img {
+.general-markdown ::ng-deep img {
   width: 100%;
   height: auto;
   margin: 20px 0;
