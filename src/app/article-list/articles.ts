@@ -39,18 +39,10 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 0,
-    title: 'Testing my own website',
-    subtitle: 'Test',
-    date: '2024/06/01',
+    title: 'Cartographer Research Notes',
+    subtitle: 'Exploring one of the best 3D SLAM algorithm',
+    date: 'May 9, 2022',
     documentPath: 'assets/articles/test.md',
-    coverImagePath: 'assets/images/myself.png',
-  },
-  {
-    id: 1,
-    title: 'Test',
-    subtitle: 'Test',
-    date: '2024/06/01',
-    documentPath: 'assets/articles/test2.md',
-    coverImagePath: 'assets/images/myself.png',
+    coverImagePath: 'assets/images/nctu-point-cloud-map.jpeg',
   },
 ];

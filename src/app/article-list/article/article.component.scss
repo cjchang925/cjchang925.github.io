@@ -16,8 +16,8 @@
 }
 
 .general-markdown ::ng-deep h1 {
-  font-size: 66px;
-  line-height: 80px;
+  font-size: 50px;
+  line-height: 60px;
   font-family: "Signika Negative", sans-serif;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .general-markdown ::ng-deep h2 {
-  font-size: 44px;
+  font-size: 30px;
   line-height: 60px;
   font-family: "Signika Negative", sans-serif;
 }
@@ -39,10 +39,24 @@
   font-family: "Signika Negative", sans-serif;
 }
 
+.general-markdown ::ng-deep h3 {
+  font-size: 26px;
+  line-height: 60px;
+  font-family: "Signika Negative", sans-serif;
+  margin: 20px 0 0 0;
+}
+
+.general-markdown.mobile ::ng-deep h3 {
+  font-size: 22px;
+  line-height: 60px;
+  font-family: "Signika Negative", sans-serif;
+}
+
 .general-markdown ::ng-deep p,
 .general-markdown ::ng-deep li {
   font-size: 20px;
   line-height: 30px;
+  font-weight: lighter;
 }
 
 .general-markdown ::ng-deep a {
@@ -55,7 +69,25 @@
 }
 
 .general-markdown ::ng-deep img {
-  width: 100%;
+  width: 60%;
   height: auto;
-  margin: 20px 0;
+  margin-left: 20%;
+}
+
+.general-markdown ::ng-deep .image-title {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: gray;
+  width: 100%;
+  text-align: center;
+}
+
+.general-markdown ::ng-deep .date-location {
+  color: gray !important;
+  font-size: 16px;
+}
+
+.general-markdown ::ng-deep hr {
+  border: 0.5px solid #ddd;
+  margin-bottom: 30px;
 }
