@@ -8,7 +8,7 @@
 .general-markdown {
   margin-top: 30px;
   width: 60%;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .general-markdown.mobile {
@@ -18,45 +18,50 @@
 .general-markdown ::ng-deep h1 {
   font-size: 50px;
   line-height: 60px;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .general-markdown.mobile ::ng-deep h1 {
   font-size: 44px;
   line-height: 60px;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .general-markdown ::ng-deep h2 {
   font-size: 30px;
   line-height: 60px;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .general-markdown.mobile ::ng-deep h2 {
   font-size: 30px;
   line-height: 40px;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .general-markdown ::ng-deep h3 {
   font-size: 26px;
   line-height: 60px;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 20px 0 0 0;
+  font-weight: bold;
 }
 
 .general-markdown.mobile ::ng-deep h3 {
   font-size: 22px;
   line-height: 60px;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .general-markdown ::ng-deep p,
 .general-markdown ::ng-deep li {
   font-size: 20px;
   line-height: 30px;
-  font-weight: lighter;
 }
 
 .general-markdown ::ng-deep a {

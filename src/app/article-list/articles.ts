@@ -42,7 +42,15 @@ export const articles: Article[] = [
     title: 'Cartographer Research Notes',
     subtitle: 'Exploring one of the best 3D SLAM algorithm',
     date: 'May 9, 2022',
-    documentPath: 'assets/articles/test.md',
+    documentPath: 'assets/articles/cartographer.md',
+    coverImagePath: 'assets/images/nctu-point-cloud-map.jpeg',
+  },
+  {
+    id: 1,
+    title: 'Gate.io & MAX XEMM',
+    subtitle: 'Implementation of XEMM strategy across Gate.io and MAX',
+    date: 'September 3, 2024',
+    documentPath: 'assets/articles/xemm.md',
     coverImagePath: 'assets/images/nctu-point-cloud-map.jpeg',
   },
 ];
